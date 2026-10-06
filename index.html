@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="APE 6 - Evaluación y validación + métodos de evaluación. Grupo 5, IHC." />
+  <title>APE 6 · Evaluación UX | Grupo 5</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark">G5</span>
+        <span>
+          <strong>UX Evaluation Lab</strong>
+          <small>APE 6 · IHC</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#exposicion">Exposición</a>
+        <a href="#laboratorio">Laboratorio</a>
+        <a href="#heuristicas">Heurísticas</a>
+        <a href="#hallazgos">Hallazgos</a>
+        <a href="#rubrica">Rúbrica</a>
+      </nav>
+
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+        <span id="themeIcon">☾</span>
+      </button>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero section">
+        <div class="hero-copy">
+          <span class="eyebrow">Grupo 5 · 5.º Software · Paralelo B</span>
+          <h1>Evaluación y validación <span>+ métodos de evaluación</span></h1>
+          <p class="hero-question">¿Una interfaz que funciona técnicamente puede ser una mala interfaz?</p>
+          <p class="hero-text">
+            Sí. Una interfaz puede cumplir técnicamente y aun así fallar en usabilidad, comprensión,
+            feedback, prevención de errores o eficiencia. Esta web guía nuestra exposición y permite
+            registrar evidencia, calificar resultados y construir el backlog UX en tiempo real.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#exposicion">Iniciar exposición</a>
+            <a class="btn secondary" href="#laboratorio">Ir al laboratorio</a>
+          </div>
+        </div>
+
+        <div class="hero-panel glass-card">
+          <div class="status-row">
+            <span class="status-dot"></span>
+            <span>Flujo de defensa</span>
+          </div>
+          <ol class="flow-list">
+            <li><span>01</span> Planificar</li>
+            <li><span>02</span> Pilotear</li>
+            <li><span>03</span> Evaluar</li>
+            <li><span>04</span> Medir</li>
+            <li><span>05</span> Triangular</li>
+            <li><span>06</span> Priorizar</li>
+            <li><span>07</span> Mejorar</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="exposicion" class="section exposition-section">
+        <div class="section-heading">
+          <span class="eyebrow">Exposición visual · Grupo 5</span>
+          <h2>Guion de exposición</h2>
+        </div>
+
+        <div class="speaker-tabs" role="tablist" aria-label="Integrantes">
+          <button class="speaker-tab active" data-speaker="carlos" type="button"><span>01</span> Carlos</button>
+          <button class="speaker-tab" data-speaker="karen" type="button"><span>02</span> Karen</button>
+          <button class="speaker-tab" data-speaker="bryan" type="button"><span>03</span> Bryan</button>
+          <button class="speaker-tab" data-speaker="thomas" type="button"><span>04</span> Thomas</button>
+        </div>
+
+        <div class="speaker-layout">
+          <article class="speaker-panel active" data-panel="carlos">
+            <div class="speaker-header">
+              <div><span class="speaker-index">01</span><h3>Carlos · ¿Por qué evaluamos una interfaz?</h3></div>
+            </div>
+            <div class="speaker-showcase">
+              <div class="talk-track">
+                <div class="talk-point"><span class="talk-icon">💡</span><div><strong>1. Pregunta inicial</strong><p>“¿Una interfaz que funciona técnicamente puede ser mala? Sí. Puede guardar información y ejecutar procesos correctamente, pero aun así ser confusa, lenta o difícil de usar.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🎯</span><div><strong>2. Evaluar vs. validar</strong><p>“Evaluar es detectar problemas mediante observación, tareas y datos. Validar es comprobar si la solución realmente permite que el usuario cumpla su objetivo de manera clara y eficiente.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🧪</span><div><strong>3. Dos métodos</strong><p>“Aplicaremos una prueba de usabilidad moderada y una evaluación heurística. Los dos métodos se complementan: uno observa al usuario y el otro revisa principios de diseño.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🧭</span><div><strong>4. Pilotaje</strong><p>“Antes de medir hacemos un pilotaje. Nos sirve para comprobar que las tareas sean claras, que no den pistas y que todos entiendan qué deben intentar lograr.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">📌</span><div><strong>5. Qué queremos demostrar</strong><p>“La meta es dejar de decir ‘se ve difícil’ y demostrarlo con evidencia: qué hizo el usuario, cuánto tardó, qué errores tuvo y qué principio de usabilidad se incumplió.”</p></div></div>
+                <div class="mini-example"><b>Ejemplo:</b> guardar datos correctamente no basta si el usuario no encuentra el botón o no sabe si la acción terminó.</div>
+              </div>
+              <div class="topic-visual visual-evaluate" aria-hidden="true">
+                <div class="visual-title">FUNCIONA ≠ ES USABLE</div>
+                <div class="orbit-core">UX</div>
+                <div class="orbit-node node-a">⚙️<small>Funciona</small></div>
+                <div class="orbit-node node-b">👁️<small>Se entiende</small></div>
+                <div class="orbit-node node-c">✅<small>Se valida</small></div>
+                <div class="orbit-ring ring-one"></div>
+                <div class="orbit-ring ring-two"></div>
+              </div>
+            </div>
+            <div class="quiz-block">
+              <button class="btn secondary reveal-quiz" type="button" aria-expanded="false" data-target="quiz-carlos">🧠 Practicar preguntas</button>
+              <div id="quiz-carlos" class="quiz-panel" hidden>
+                <article class="quiz-card" data-correct="b" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 1</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>¿Cuál es la diferencia principal entre evaluación y validación?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. Son exactamente lo mismo.</button>
+                    <button data-option="b" type="button">B. Evaluar detecta problemas; validar comprueba si la solución cumple el objetivo del usuario.</button>
+                    <button data-option="c" type="button">C. Validar sirve solo para calificar.</button>
+                    <button data-option="d" type="button">D. Evaluar solo consiste en mirar la interfaz.</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+                <article class="quiz-card" data-correct="c" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 2</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>¿Para qué sirve el pilotaje?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. Para ayudar al usuario durante la prueba.</button>
+                    <button data-option="b" type="button">B. Para eliminar las métricas.</button>
+                    <button data-option="c" type="button">C. Para corregir tareas ambiguas antes de registrar datos finales.</button>
+                    <button data-option="d" type="button">D. Para reemplazar las heurísticas.</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <article class="speaker-panel" data-panel="karen">
+            <div class="speaker-header">
+              <div><span class="speaker-index">02</span><h3>Karen · Prueba de usabilidad</h3></div>
+            </div>
+            <div class="speaker-showcase">
+              <div class="talk-track">
+                <div class="talk-point"><span class="talk-icon">👤</span><div><strong>1. Usuario y tarea real</strong><p>“Observamos cómo una persona intenta completar tareas representativas del sistema sin indicarle dónde hacer clic. Así vemos si la interfaz se entiende por sí sola.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🗣️</span><div><strong>2. Pensamiento en voz alta</strong><p>“El usuario expresa qué espera encontrar, qué interpreta y qué le genera dudas. Esto nos da evidencia cualitativa sobre su experiencia.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🧑‍🏫</span><div><strong>3. Moderación neutral</strong><p>“El moderador explica la tarea, pero no debe dar pistas ni señalar botones. Si ayudamos al usuario, ocultamos problemas reales de navegación o comprensión.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🧭</span><div><strong>4. No culpamos al usuario</strong><p>“Si la persona se pierde, revisamos primero etiquetas, jerarquía visual, ubicación, consistencia y feedback. El error puede ser una señal de un problema de diseño.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">📝</span><div><strong>5. Qué registramos</strong><p>“Anotamos frases, dudas y comportamientos observables. Después los relacionamos con los tiempos, errores y heurísticas para comprobar si el problema se repite.”</p></div></div>
+                <div class="mini-example"><b>Ejemplo:</b> “No sé si se guardó” puede revelar un problema de feedback, no un error de la persona.</div>
+              </div>
+              <div class="topic-visual visual-user" aria-hidden="true">
+                <div class="visual-title">PRUEBA MODERADA</div>
+                <div class="user-avatar">👤</div>
+                <div class="speech-bubble bubble-one">¿Dónde está?</div>
+                <div class="speech-bubble bubble-two">¿Ya se guardó?</div>
+                <div class="cursor-dot"></div>
+                <div class="task-path"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="quiz-block">
+              <button class="btn secondary reveal-quiz" type="button" aria-expanded="false" data-target="quiz-karen">🧠 Practicar preguntas</button>
+              <div id="quiz-karen" class="quiz-panel" hidden>
+                <article class="quiz-card" data-correct="a" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 1</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>¿Por qué el moderador no debe ayudar al usuario?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. Porque una pista puede ocultar un problema real de la interfaz.</button>
+                    <button data-option="b" type="button">B. Porque el moderador no puede hablar nunca.</button>
+                    <button data-option="c" type="button">C. Porque así termina más rápido.</button>
+                    <button data-option="d" type="button">D. Porque el usuario debe memorizar el sistema.</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+                <article class="quiz-card" data-correct="d" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 2</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>¿Qué aporta el pensamiento en voz alta?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. Sustituye todas las métricas.</button>
+                    <button data-option="b" type="button">B. Enseña al usuario el camino correcto.</button>
+                    <button data-option="c" type="button">C. Hace que la prueba sea más corta.</button>
+                    <button data-option="d" type="button">D. Muestra expectativas, dudas e interpretación del usuario.</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <article class="speaker-panel" data-panel="bryan">
+            <div class="speaker-header">
+              <div><span class="speaker-index">03</span><h3>Bryan · Métricas de usabilidad</h3></div>
+            </div>
+            <div class="speaker-showcase">
+              <div class="talk-track">
+                <div class="talk-point"><span class="talk-icon">✅</span><div><strong>1. Éxito de la tarea</strong><p>“Registramos si la tarea se completó o no. Con esos resultados calculamos la tasa de éxito y vemos qué tan fácil es completar el flujo propuesto.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">📐</span><div><strong>2. Tasa de éxito</strong><p>“La fórmula es tareas completadas dividido para tareas totales, multiplicado por cien. Si se completan dos de tres tareas, obtenemos aproximadamente 66,7 %.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">⏱️</span><div><strong>3. Tiempo</strong><p>“El tiempo muestra cuánto esfuerzo necesita el usuario para completar una acción. Un tiempo alto en una tarea sencilla puede indicar búsqueda, duda o navegación innecesaria.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">⚠️</span><div><strong>4. Errores e intentos</strong><p>“Contamos acciones incorrectas e intentos repetidos. Esto nos ayuda a localizar los puntos donde el usuario encuentra mayor fricción.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🔗</span><div><strong>5. Los números necesitan contexto</strong><p>“Una métrica sola no explica la causa. Por eso combinamos los datos con lo que dijo el usuario y con la evaluación heurística antes de concluir.”</p></div></div>
+                <div class="mini-example"><b>Ejemplo:</b> 2 de 3 tareas completadas = 66,7 % de tasa de éxito; si además hay mucho tiempo y errores, esa tarea requiere revisión.</div>
+              </div>
+              <div class="topic-visual visual-metrics" aria-hidden="true">
+                <div class="visual-title">MEDIR PARA DECIDIR</div>
+                <div class="chart-bars"><i style="--h:42%"></i><i style="--h:72%"></i><i style="--h:55%"></i><i style="--h:90%"></i></div>
+                <div class="metric-bubble metric-one">66,7%<small>éxito</small></div>
+                <div class="metric-bubble metric-two">38s<small>promedio</small></div>
+              </div>
+            </div>
+            <div class="quiz-block">
+              <button class="btn secondary reveal-quiz" type="button" aria-expanded="false" data-target="quiz-bryan">🧠 Practicar preguntas</button>
+              <div id="quiz-bryan" class="quiz-panel" hidden>
+                <article class="quiz-card" data-correct="b" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 1</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>Si completa 2 de 3 tareas, ¿cuál es la tasa de éxito?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. 33,3 %</button>
+                    <button data-option="b" type="button">B. 66,7 %</button>
+                    <button data-option="c" type="button">C. 75 %</button>
+                    <button data-option="d" type="button">D. 100 %</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+                <article class="quiz-card" data-correct="c" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 2</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>¿Qué combinación muestra mayor fricción?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. Éxito, 10 s, 0 errores.</button>
+                    <button data-option="b" type="button">B. Éxito, 12 s, 1 intento.</button>
+                    <button data-option="c" type="button">C. Fracaso, 55 s, 3 errores y 3 intentos.</button>
+                    <button data-option="d" type="button">D. Éxito, 20 s, 0 errores.</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <article class="speaker-panel" data-panel="thomas">
+            <div class="speaker-header">
+              <div><span class="speaker-index">04</span><h3>Thomas · Heurísticas, severidad y backlog</h3></div>
+            </div>
+            <div class="speaker-showcase">
+              <div class="talk-track">
+                <div class="talk-point"><span class="talk-icon">🔍</span><div><strong>1. Evaluación heurística</strong><p>“Revisamos la interfaz con los 10 principios de Nielsen. Esto permite identificar problemas de visibilidad, consistencia, prevención de errores, control del usuario y otras áreas de usabilidad.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🔥</span><div><strong>2. Severidad 0–4</strong><p>“Clasificamos cada problema de 0 a 4: sin problema, cosmético, menor, importante o crítico. Así podemos priorizar lo que realmente afecta la experiencia.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🔺</span><div><strong>3. Triangulación</strong><p>“Comparamos tres fuentes: lo que hizo y dijo el usuario, las métricas y las heurísticas. Cuando las tres apuntan al mismo problema, el hallazgo tiene mayor respaldo.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🧩</span><div><strong>4. Matriz de hallazgos</strong><p>“Cada hallazgo queda documentado con evidencia, método, severidad y una recomendación concreta. Así podemos explicar por qué proponemos cada cambio.”</p></div></div>
+                <div class="talk-point"><span class="talk-icon">🚀</span><div><strong>5. Backlog de mejoras</strong><p>“Finalmente ordenamos las mejoras por prioridad. Las de mayor severidad pasan primero al backlog y pueden convertirse en Issues de GitHub para dar seguimiento.”</p></div></div>
+                <div class="mini-example"><b>Ejemplo:</b> usuario se pierde + tiempo alto + heurística de visibilidad = hallazgo respaldado y mejora prioritaria.</div>
+              </div>
+              <div class="topic-visual visual-heuristic" aria-hidden="true">
+                <div class="visual-title">EVIDENCIA → MEJORA</div>
+                <div class="triangle-map"><span>👤<small>Usuario</small></span><span>📊<small>Métricas</small></span><span>🔍<small>Heurísticas</small></span><b>HALLAZGO</b></div>
+                <div class="backlog-pill">🚀 Backlog priorizado</div>
+              </div>
+            </div>
+            <div class="quiz-block">
+              <button class="btn secondary reveal-quiz" type="button" aria-expanded="false" data-target="quiz-thomas">🧠 Practicar preguntas</button>
+              <div id="quiz-thomas" class="quiz-panel" hidden>
+                <article class="quiz-card" data-correct="d" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 1</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>¿Qué significa severidad 4?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. Problema menor.</button>
+                    <button data-option="b" type="button">B. Problema cosmético.</button>
+                    <button data-option="c" type="button">C. No existe problema.</button>
+                    <button data-option="d" type="button">D. Problema crítico que debe priorizarse.</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+                <article class="quiz-card" data-correct="a" data-attempts="3">
+                  <div class="quiz-head"><strong>Pregunta 2</strong><span class="attempts-badge">3 intentos</span></div>
+                  <p>¿Qué es la triangulación?</p>
+                  <div class="quiz-options">
+                    <button data-option="a" type="button">A. Comparar usuario, métricas y heurísticas para respaldar un hallazgo.</button>
+                    <button data-option="b" type="button">B. Elegir la pantalla más bonita.</button>
+                    <button data-option="c" type="button">C. Calcular la nota de la rúbrica.</button>
+                    <button data-option="d" type="button">D. Repetir tres veces la misma tarea.</button>
+                  </div><div class="quiz-feedback"></div>
+                </article>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="laboratorio" class="section surface-section">
+        <div class="section-heading">
+          <span class="eyebrow">Método 1 · Práctica en vivo</span>
+          <h2>Laboratorio de usabilidad</h2>
+          <p>Esta práctica sirve para observar cómo una persona completa tareas reales y convertir su comportamiento en evidencia. Primero hagan un pilotaje corto; después ejecuten la prueba y registren los datos definitivos.</p>
+        </div>
+
+        <div class="purpose-banner">
+          <div><span>¿Para qué sirve?</span><strong>Detectar fricción real durante tareas concretas.</strong></div>
+          <div><span>¿Qué nos aporta?</span><strong>Observaciones + tiempos + errores + éxito/fracaso.</strong></div>
+          <div><span>¿Qué demostramos?</span><strong>Que la usabilidad puede medirse y justificarse con evidencia.</strong></div>
+        </div>
+
+        <div class="role-grid">
+          <div class="role-card"><span>MOD</span><strong>Carlos</strong><small>Presenta tareas sin dar pistas y registra observaciones.</small></div>
+          <div class="role-card"><span>USR</span><strong>Karen</strong><small>Ejecuta tareas y verbaliza lo que piensa.</small></div>
+          <div class="role-card"><span>DAT</span><strong>Bryan</strong><small>Mide tiempo, éxito, errores e intentos.</small></div>
+          <div class="role-card"><span>OBS</span><strong>Thomas</strong><small>Relaciona problemas con heurísticas y severidad.</small></div>
+        </div>
+
+        <div class="practice-grid">
+          <article class="practice-card">
+            <span class="practice-owner">Carlos · Moderador</span>
+            <h3>Qué hace en la práctica</h3>
+            <ol>
+              <li>Explica el escenario sin enseñar el camino correcto.</li>
+              <li>Lee una tarea por vez y pregunta si la instrucción se entendió.</li>
+              <li>No ayuda ni indica dónde hacer clic.</li>
+              <li>Anota frases, dudas y comportamientos observables.</li>
+            </ol>
+            <p><strong>Nos sirve para:</strong> mantener una prueba neutral y evitar que las pistas del moderador oculten problemas de la interfaz.</p>
+          </article>
+          <article class="practice-card">
+            <span class="practice-owner">Karen · Usuario</span>
+            <h3>Qué hace en la práctica</h3>
+            <ol>
+              <li>Lee la tarea y comienza desde el punto definido.</li>
+              <li>Usa la interfaz sin recibir ayuda.</li>
+              <li>Piensa en voz alta: qué espera, qué busca y qué le confunde.</li>
+              <li>Al finalizar explica brevemente qué fue fácil o difícil.</li>
+            </ol>
+            <p><strong>Nos sirve para:</strong> conocer la interpretación real del usuario y obtener evidencia cualitativa de sus dudas y expectativas.</p>
+          </article>
+          <article class="practice-card">
+            <span class="practice-owner">Bryan · Métricas</span>
+            <h3>Qué hace en la práctica</h3>
+            <ol>
+              <li>Inicia el cronómetro al comenzar cada tarea.</li>
+              <li>Marca éxito o fracaso al finalizar.</li>
+              <li>Cuenta errores e intentos sin interrumpir al usuario.</li>
+              <li>Ingresa los valores y pulsa “Calcular resultados”.</li>
+            </ol>
+            <p><strong>Nos sirve para:</strong> convertir la interacción en datos cuantitativos que permiten comparar las tareas.</p>
+          </article>
+          <article class="practice-card">
+            <span class="practice-owner">Thomas · Observador</span>
+            <h3>Qué hace en la práctica</h3>
+            <ol>
+              <li>Observa sin intervenir en la ejecución.</li>
+              <li>Relaciona cada problema con una heurística de Nielsen.</li>
+              <li>Asigna severidad según el impacto del problema.</li>
+              <li>Completa los hallazgos y genera el backlog final.</li>
+            </ol>
+            <p><strong>Nos sirve para:</strong> aportar un segundo método y transformar los problemas observados en mejoras priorizadas.</p>
+          </article>
+        </div>
+
+        <div class="pilot-card">
+          <span class="practice-owner">Paso 0 · Pilotaje antes de medir</span>
+          <p>Ejecuten una vez las tres tareas sin tomar esos valores como resultados finales. Si una instrucción es ambigua, demasiado larga o revela el camino, corríjanla. Luego reinicien la prueba y registren los datos definitivos.</p>
+        </div>
+
+        <div class="instrument-note">
+          <span>Instrumento 1</span>
+          <div><strong>Matriz de tareas y métricas</strong><p><b>Para qué sirve:</b> registrar qué debía hacer el usuario y qué ocurrió realmente. <b>Nos permite:</b> identificar cuál tarea genera más tiempo, errores, intentos o fracasos.</p></div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-card-head">
+            <div><h3>Matriz de tareas y métricas</h3><p>Reemplacen las descripciones por las tareas reales de su sistema.</p></div>
+            <button id="calculateMetrics" class="btn small primary" type="button">Calcular resultados</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tarea</th>
+                  <th>Descripción</th>
+                  <th>Resultado</th>
+                  <th>Tiempo (s)</th>
+                  <th>Errores</th>
+                  <th>Intentos</th>
+                  <th>Observación</th>
+                </tr>
+              </thead>
+              <tbody id="taskTableBody">
+                <tr>
+                  <td>T01</td>
+                  <td><input data-field="task" value="Iniciar sesión y acceder a una sección principal" /></td>
+                  <td><select data-field="success"><option value="1">Éxito</option><option value="0">Fracaso</option></select></td>
+                  <td><input data-field="time" type="number" min="0" value="18" /></td>
+                  <td><input data-field="errors" type="number" min="0" value="0" /></td>
+                  <td><input data-field="attempts" type="number" min="1" value="1" /></td>
+                  <td><input data-field="note" value="Sin dificultad" /></td>
+                </tr>
+                <tr>
+                  <td>T02</td>
+                  <td><input data-field="task" value="Encontrar una opción y registrar información" /></td>
+                  <td><select data-field="success"><option value="1">Éxito</option><option value="0">Fracaso</option></select></td>
+                  <td><input data-field="time" type="number" min="0" value="43" /></td>
+                  <td><input data-field="errors" type="number" min="0" value="2" /></td>
+                  <td><input data-field="attempts" type="number" min="1" value="2" /></td>
+                  <td><input data-field="note" value="El usuario dudó antes de encontrar la acción" /></td>
+                </tr>
+                <tr>
+                  <td>T03</td>
+                  <td><input data-field="task" value="Consultar o completar una operación importante" /></td>
+                  <td><select data-field="success"><option value="1">Éxito</option><option value="0" selected>Fracaso</option></select></td>
+                  <td><input data-field="time" type="number" min="0" value="55" /></td>
+                  <td><input data-field="errors" type="number" min="0" value="3" /></td>
+                  <td><input data-field="attempts" type="number" min="1" value="3" /></td>
+                  <td><input data-field="note" value="La navegación generó confusión" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card"><span>Tasa de éxito</span><strong id="successRate">66.7%</strong><small>tareas completadas / total</small></article>
+          <article class="metric-card"><span>Tiempo promedio</span><strong id="avgTime">38.7 s</strong><small>promedio de las tareas</small></article>
+          <article class="metric-card"><span>Errores totales</span><strong id="totalErrors">5</strong><small>acciones incorrectas</small></article>
+          <article class="metric-card"><span>Intentos totales</span><strong id="totalAttempts">6</strong><small>cantidad de intentos</small></article>
+        </div>
+
+        <div class="insight-card">
+          <span class="insight-label">Interpretación automática</span>
+          <p id="metricsInsight">La tasa de éxito es moderada. Conviene revisar las tareas con más errores y mayor tiempo antes de considerar el flujo como validado.</p>
+        </div>
+      </section>
+
+      <section id="heuristicas" class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Método 2</span>
+          <h2>Matriz de evaluación heurística</h2>
+          <p>Este método complementa la prueba con usuario. Permite revisar sistemáticamente la interfaz contra principios de usabilidad y detectar problemas que podrían no aparecer en una sola ejecución.</p>
+        </div>
+
+        <div class="instrument-note">
+          <span>Instrumento 2</span>
+          <div><strong>Heurísticas de Nielsen</strong><p><b>Para qué sirve:</b> comparar la interfaz con diez principios reconocidos de usabilidad. <b>Nos permite:</b> justificar por qué un comportamiento es problemático y asignarle una severidad de 0 a 4.</p></div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-card-head">
+            <div><h3>10 heurísticas de Nielsen</h3><p>0 = sin problema · 4 = problema crítico</p></div>
+            <button id="calculateHeuristics" class="btn small secondary" type="button">Actualizar análisis</button>
+          </div>
+          <div class="table-wrap">
+            <table class="heuristic-table">
+              <thead><tr><th>#</th><th>Heurística</th><th>Severidad</th><th>Evidencia / problema encontrado</th></tr></thead>
+              <tbody id="heuristicBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="metric-grid three">
+          <article class="metric-card"><span>Severidad promedio</span><strong id="avgSeverity">0.0</strong><small>promedio 0–4</small></article>
+          <article class="metric-card"><span>Problemas ≥ 3</span><strong id="highSeverityCount">0</strong><small>importantes o críticos</small></article>
+          <article class="metric-card"><span>Heurística crítica</span><strong id="topHeuristic">—</strong><small>mayor severidad registrada</small></article>
+        </div>
+      </section>
+
+      <section id="hallazgos" class="section surface-section">
+        <div class="section-heading">
+          <span class="eyebrow">Análisis y cierre</span>
+          <h2>Triangulación, hallazgos y backlog</h2>
+          <p>Aquí reunimos lo observado en el usuario, las métricas y las heurísticas. El objetivo es decidir qué problemas tienen suficiente evidencia y cuáles deben resolverse primero.</p>
+        </div>
+
+        <div class="purpose-banner">
+          <div><span>Triangulación</span><strong>Contrasta varias fuentes antes de concluir.</strong></div>
+          <div><span>Matriz de hallazgos</span><strong>Resume problema, evidencia, severidad y mejora.</strong></div>
+          <div><span>Backlog</span><strong>Convierte hallazgos en acciones priorizadas para GitHub.</strong></div>
+        </div>
+
+        <div class="instrument-note">
+          <span>¿Para qué sirve?</span>
+          <div><strong>Triangulación de evidencia</strong><p>Evita basar una decisión en una sola opinión. Si una dificultad aparece en el comportamiento del usuario, también se refleja en las métricas y además tiene respaldo heurístico, el hallazgo gana fuerza.</p></div>
+        </div>
+
+        <div class="triangulation glass-card">
+          <div class="tri-node">Usuario</div>
+          <div class="tri-center">Hallazgo respaldado</div>
+          <div class="tri-node">Métricas</div>
+          <div class="tri-node">Heurísticas</div>
+        </div>
+
+        <div class="instrument-note">
+          <span>Instrumento 3</span>
+          <div><strong>Matriz de hallazgos</strong><p><b>Para qué sirve:</b> consolidar cada problema con su método, evidencia y severidad. <b>Nos permite:</b> pasar de observaciones dispersas a decisiones documentadas y defendibles.</p></div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-card-head">
+            <div><h3>Matriz de hallazgos</h3><p>Completen con la evidencia real de la prueba.</p></div>
+            <button id="generateBacklog" class="btn small primary" type="button">Generar backlog</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Responsable</th><th>Hallazgo</th><th>Método</th><th>Evidencia</th><th>Severidad</th><th>Mejora propuesta</th></tr></thead>
+              <tbody id="findingsBody">
+                <tr>
+                  <td>H01</td><td>Carlos</td>
+                  <td><input value="La acción principal no destaca visualmente" /></td>
+                  <td><select><option>Usabilidad</option><option>Heurística</option><option>Ambos</option></select></td>
+                  <td><input value="El usuario dudó antes de iniciar la tarea" /></td>
+                  <td><select class="severity-select"><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></td>
+                  <td><input value="Reforzar jerarquía visual y etiqueta" /></td>
+                </tr>
+                <tr>
+                  <td>H02</td><td>Karen</td>
+                  <td><input value="El usuario no recibe feedback claro al guardar" /></td>
+                  <td><select><option>Usabilidad</option><option selected>Ambos</option><option>Heurística</option></select></td>
+                  <td><input value="Se repitió la acción por duda" /></td>
+                  <td><select class="severity-select"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select></td>
+                  <td><input value="Agregar confirmación visible y persistente" /></td>
+                </tr>
+                <tr>
+                  <td>H03</td><td>Bryan</td>
+                  <td><input value="Una tarea requiere demasiados intentos" /></td>
+                  <td><select><option selected>Usabilidad</option><option>Heurística</option><option>Ambos</option></select></td>
+                  <td><input value="3 intentos y 55 segundos" /></td>
+                  <td><select class="severity-select"><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></td>
+                  <td><input value="Reducir pasos y mejorar señalización" /></td>
+                </tr>
+                <tr>
+                  <td>H04</td><td>Thomas</td>
+                  <td><input value="El mensaje de error no explica cómo recuperarse" /></td>
+                  <td><select><option>Usabilidad</option><option selected>Heurística</option><option>Ambos</option></select></td>
+                  <td><input value="Incumple recuperación ante errores" /></td>
+                  <td><select class="severity-select"><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></td>
+                  <td><input value="Usar mensaje claro, causa y acción de recuperación" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="instrument-note compact-note">
+          <span>Instrumento 4</span>
+          <div><strong>Backlog UX</strong><p><b>Para qué sirve:</b> ordenar las mejoras según prioridad. <b>Nos permite:</b> crear Issues de GitHub y demostrar que la evaluación termina en acciones concretas, no solo en observaciones.</p></div>
+        </div>
+
+        <div class="backlog-card">
+          <div class="table-card-head"><div><h3>Backlog UX generado</h3><p>Prioridad derivada de la severidad.</p></div></div>
+          <div id="backlogList" class="backlog-list"></div>
+        </div>
+      </section>
+
+      <section id="rubrica" class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Calificación académica</span>
+          <h2>Matriz de evaluación de la exposición</h2>
+          <p>Esta matriz no es un método de usabilidad: sirve para simular o registrar la calificación académica de la exposición según los criterios de la rúbrica. Ingresen la nota alcanzada y el total se calcula sobre 3,00 puntos.</p>
+        </div>
+
+        <div class="instrument-note">
+          <span>¿Para qué sirve?</span>
+          <div><strong>Control de la rúbrica</strong><p>Permite comprobar antes de exponer si están cubriendo dominio conceptual, aplicación al proyecto, implementación del APE, evidencia en GitHub y defensa oral.</p></div>
+        </div>
+
+        <div class="rubric-layout">
+          <div class="table-card">
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Criterio</th><th>Máximo</th><th>Calificación</th><th>% logrado</th></tr></thead>
+                <tbody id="rubricBody">
+                  <tr><td>Dominio conceptual</td><td class="max-score">0.50</td><td><input class="rubric-input" type="number" min="0" max="0.5" step="0.05" value="0.45" /></td><td class="rubric-percent">90%</td></tr>
+                  <tr><td>Aplicación al proyecto</td><td class="max-score">0.75</td><td><input class="rubric-input" type="number" min="0" max="0.75" step="0.05" value="0.70" /></td><td class="rubric-percent">93%</td></tr>
+                  <tr><td>Construcción / implementación APE</td><td class="max-score">0.75</td><td><input class="rubric-input" type="number" min="0" max="0.75" step="0.05" value="0.70" /></td><td class="rubric-percent">93%</td></tr>
+                  <tr><td>Evidencia técnica / GitHub</td><td class="max-score">0.40</td><td><input class="rubric-input" type="number" min="0" max="0.4" step="0.05" value="0.35" /></td><td class="rubric-percent">88%</td></tr>
+                  <tr><td>Exposición y defensa</td><td class="max-score">0.60</td><td><input class="rubric-input" type="number" min="0" max="0.6" step="0.05" value="0.55" /></td><td class="rubric-percent">92%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="score-card">
+            <span>Resultado</span>
+            <strong><span id="rubricTotal">2.75</span><small> / 3.00</small></strong>
+            <div class="score-progress"><div id="rubricProgress"></div></div>
+            <p id="rubricMessage">Nivel muy alto. Revisen los criterios con menor porcentaje antes de exponer.</p>
+            <button id="resetRubric" class="btn secondary full" type="button">Restablecer ejemplo</button>
+          </aside>
+        </div>
+      </section>
+
+
+      <section class="section closing">
+        <div class="closing-card">
+          <span class="eyebrow">Idea de cierre</span>
+          <h2>Que funcione no significa que sea usable.</h2>
+          <p>La evaluación convierte opiniones en evidencia; la evidencia en hallazgos; y los hallazgos en mejoras priorizadas.</p>
+          <div class="closing-flow"><span>Observar</span><b>→</b><span>Medir</span><b>→</b><span>Evaluar</span><b>→</b><span>Priorizar</span><b>→</b><span>Mejorar</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Grupo 5 · Interacción Humano–Computador · 2026</span>
+      <span>Carlos · Karen · Bryan · Thomas</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
